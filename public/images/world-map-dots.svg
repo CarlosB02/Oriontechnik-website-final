@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 460" fill="none" width="1000" height="460">
+  <defs>
+    <radialGradient id="mapGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C3C8B3" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#C3C8B3" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1000" height="460" fill="url(#mapGlow)"/>
+  
+  <!-- Subtle coordinate grid lines -->
+  <g stroke="#ffffff" stroke-opacity="0.06" stroke-width="0.8" stroke-dasharray="3 4">
+    <line x1="50" y1="115" x2="950" y2="115"/>
+    <line x1="50" y1="230" x2="950" y2="230"/>
+    <line x1="50" y1="345" x2="950" y2="345"/>
+    <line x1="250" y1="40" x2="250" y2="420"/>
+    <line x1="500" y1="40" x2="500" y2="420"/>
+    <line x1="750" y1="40" x2="750" y2="420"/>
+  </g>
+
+  <!-- World Map Continents in Dotted Matrix Pattern -->
+  <g fill="#C3C8B3" fill-opacity="0.28">
+    <!-- North America -->
+    <path d="M 120 70 q 30 -20 80 -10 q 50 15 45 45 q -10 30 -40 50 q -30 20 -20 50 q 10 30 -15 65 q -20 20 -35 -10 q -20 -30 -10 -70 q 10 -40 -5 -70 Z"/>
+    <path d="M 70 80 q 25 -15 45 5 q 20 20 -10 35 q -25 15 -35 -40 Z"/>
+    
+    <!-- South America -->
+    <path d="M 230 250 q 45 -10 65 30 q 20 40 10 90 q -10 50 -40 70 q -25 15 -35 -40 q -10 -50 0 -110 Z"/>
+
+    <!-- Europe -->
+    <path d="M 440 80 q 50 -25 90 5 q 40 30 10 55 q -30 25 -70 10 q -40 -15 -30 -70 Z"/>
+    <circle cx="430" cy="95" r="14"/>
+    <circle cx="475" cy="120" r="12"/>
+
+    <!-- Africa -->
+    <path d="M 440 170 q 60 -10 90 25 q 30 40 20 100 q -10 60 -50 85 q -40 20 -50 -40 q -10 -60 -10 -170 Z"/>
+
+    <!-- Asia -->
+    <path d="M 560 65 q 110 -30 220 10 q 110 40 60 120 q -50 80 -140 60 q -90 -20 -140 -190 Z"/>
+    
+    <!-- Japan & East Asia islands -->
+    <circle cx="860" cy="140" r="12"/>
+    <circle cx="875" cy="170" r="10"/>
+
+    <!-- Southeast Asia / Indonesia -->
+    <path d="M 720 240 q 60 5 110 35 q 30 20 -20 30 q -60 10 -90 -65 Z"/>
+
+    <!-- Australia -->
+    <path d="M 770 300 q 60 -15 95 20 q 35 35 10 65 q -35 30 -85 10 q -40 -20 -20 -95 Z"/>
+    <circle cx="910" cy="380" r="8"/>
+  </g>
+
+  <!-- High-tech Active Hub Markers with pulsing concentric rings -->
+  <!-- Lisbon / Portugal HQ -->
+  <g transform="translate(432, 142)">
+    <circle cx="0" cy="0" r="4" fill="#FFFFFF"/>
+    <circle cx="0" cy="0" r="10" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="18" stroke="#C3C8B3" stroke-opacity="0.3" stroke-width="1"/>
+  </g>
+
+  <!-- Sweden / Nordic Hub -->
+  <g transform="translate(490, 80)">
+    <circle cx="0" cy="0" r="3.5" fill="#FFFFFF"/>
+    <circle cx="0" cy="0" r="8" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1.2"/>
+  </g>
+
+  <!-- Indonesia / Asia-Pacific Hub -->
+  <g transform="translate(790, 275)">
+    <circle cx="0" cy="0" r="3.5" fill="#FFFFFF"/>
+    <circle cx="0" cy="0" r="8" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="1.2"/>
+  </g>
+
+  <!-- North America Hub -->
+  <g transform="translate(210, 140)">
+    <circle cx="0" cy="0" r="3" fill="#FFFFFF"/>
+    <circle cx="0" cy="0" r="7" stroke="#FFFFFF" stroke-opacity="0.4" stroke-width="1"/>
+  </g>
+
+  <!-- Connection flight/logistics trajectories -->
+  <path d="M 432 142 Q 320 120 210 140" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="1.2" stroke-dasharray="4 4" fill="none"/>
+  <path d="M 432 142 Q 460 100 490 80" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1.2" stroke-dasharray="4 4" fill="none"/>
+  <path d="M 432 142 Q 620 180 790 275" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="1.2" stroke-dasharray="4 4" fill="none"/>
+</svg>

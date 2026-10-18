@@ -1,0 +1,225 @@
+.main {
+  min-height: 85vh;
+  background-color: var(--color-brand-white);
+  padding-bottom: 6rem;
+}
+
+.pageHeader {
+  background-color: var(--color-brand-grey);
+  border-bottom: 1px solid var(--color-brand-border);
+  padding: 3.5rem 0 4.5rem 0;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 2rem;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.breadcrumbLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-brand-text-muted);
+  transition: color var(--transition-fast);
+}
+
+.breadcrumbLink:hover {
+  color: var(--color-brand-primary);
+}
+
+.breadcrumbDivider {
+  color: var(--color-brand-border);
+}
+
+.breadcrumbCurrent {
+  color: var(--color-brand-primary);
+}
+
+.headerTitleWrap {
+  max-width: 860px;
+}
+
+.pageTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--color-brand-text);
+  margin-bottom: 1.25rem;
+}
+
+.pageLead {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--color-brand-text-muted);
+}
+
+/* Metrics Section with World Map Backdrop */
+.metricsSection {
+  position: relative;
+  background-color: var(--color-brand-primary);
+  color: var(--color-brand-white);
+  padding: 5.5rem 0;
+  overflow: hidden;
+  margin-bottom: 5rem;
+}
+
+.mapBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.mapImage {
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.6;
+}
+
+.mapOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(61, 94, 107, 0.45) 0%,
+    rgba(38, 59, 67, 0.85) 100%
+  );
+}
+
+.metricsContainer {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.metricCard {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.metricValue {
+  font-family: var(--font-heading);
+  font-size: clamp(3.2rem, 5.5vw, 4.75rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-brand-white);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.metricLabel {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-brand-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.metricDesc {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 300px;
+}
+
+/* Facility CTA Card */
+.facilityCtaSection {
+  margin-bottom: 2rem;
+}
+
+.ctaCard {
+  background-color: var(--color-brand-white);
+  border: 1px solid var(--color-brand-border);
+  padding: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.ctaText {
+  max-width: 680px;
+}
+
+.ctaHeading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  font-weight: 700;
+  color: var(--color-brand-text);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+
+.ctaLead {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-brand-text-muted);
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.95rem 1.75rem;
+  background-color: var(--color-brand-primary);
+  color: var(--color-brand-white);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  flex-shrink: 0;
+  transition: background-color var(--transition-fast);
+}
+
+.ctaBtn:hover {
+  background-color: var(--color-brand-primary-hover);
+}
+
+@media (max-width: 1024px) {
+  .metricsGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .ctaCard {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .pageHeader {
+    padding: 2.5rem 0 3rem 0;
+  }
+}

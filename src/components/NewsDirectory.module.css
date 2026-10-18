@@ -1,0 +1,143 @@
+.directoryWrapper {
+  width: 100%;
+}
+
+/* Grid Section */
+.gridSection {
+  margin-bottom: 5rem;
+}
+
+.newsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-brand-white);
+  border: 1px solid var(--color-brand-border);
+  overflow: hidden;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.card:hover {
+  border-color: var(--color-brand-primary);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+.cardImageContainer {
+  position: relative;
+  height: 200px;
+  background-color: #17242B;
+}
+
+.cardImage {
+  object-fit: cover;
+}
+
+.cardCategoryBadge {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  background-color: rgba(61, 94, 107, 0.92);
+  color: var(--color-brand-white);
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.6rem;
+  border-radius: 1px;
+}
+
+.cardBody {
+  padding: 1.5rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.65rem;
+}
+
+.cardDate {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8C9CA2;
+}
+
+.cardReadTime {
+  font-size: 0.75rem;
+  color: var(--color-brand-text-light);
+}
+
+.cardTitle {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--color-brand-text);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.cardTitleLink {
+  color: inherit;
+  transition: color var(--transition-fast);
+}
+
+.cardTitleLink:hover {
+  color: var(--color-brand-primary);
+}
+
+.cardSummary {
+  font-size: 0.825rem;
+  line-height: 1.55;
+  color: var(--color-brand-text-muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cardFooter {
+  padding: 1rem 1.35rem;
+  border-top: 1px solid var(--color-brand-border-subtle);
+  background-color: var(--color-brand-grey);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.authorBadge {
+  font-size: 0.75rem;
+  color: var(--color-brand-text-muted);
+  font-weight: 500;
+}
+
+.cardBtn {
+  width: 34px;
+  height: 34px;
+}
+
+@media (max-width: 992px) {
+  .newsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .newsGrid {
+    grid-template-columns: 1fr;
+  }
+}

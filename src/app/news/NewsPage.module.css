@@ -1,0 +1,169 @@
+.main {
+  min-height: 80vh;
+  background-color: var(--color-brand-white);
+}
+
+.pageHeader {
+  background-color: var(--color-brand-grey);
+  border-bottom: 1px solid var(--color-brand-border);
+  padding: 3.5rem 0 4.5rem 0;
+  margin-bottom: 3.5rem;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 2rem;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.breadcrumbLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-brand-text-muted);
+  transition: color var(--transition-fast);
+}
+
+.breadcrumbLink:hover {
+  color: var(--color-brand-primary);
+}
+
+.breadcrumbDivider {
+  color: var(--color-brand-border);
+}
+
+.breadcrumbCurrent {
+  color: var(--color-brand-primary);
+}
+
+.headerTitleWrap {
+  max-width: 860px;
+}
+
+.pageTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--color-brand-text);
+  margin-bottom: 1.25rem;
+}
+
+.pageLead {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--color-brand-text-muted);
+}
+
+/* Press Office Box */
+.pressSection {
+  margin-bottom: 5rem;
+}
+
+.pressCard {
+  background-color: var(--color-brand-primary);
+  color: var(--color-brand-white);
+  padding: 3.5rem;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.pressText {
+  display: flex;
+  flex-direction: column;
+}
+
+.pressTag {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--color-brand-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.pressHeading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  font-weight: 700;
+  color: var(--color-brand-white);
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.pressDescription {
+  font-size: 0.925rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.pressContactGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 2rem;
+  border-left: 3px solid var(--color-brand-secondary);
+}
+
+.pressContactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.pressIcon {
+  color: var(--color-brand-secondary);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.pressItemLabel {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-brand-secondary);
+  margin-bottom: 0.2rem;
+}
+
+.pressItemVal {
+  font-size: 0.875rem;
+  color: var(--color-brand-white);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.pressItemVal:hover {
+  color: var(--color-brand-secondary);
+}
+
+@media (max-width: 900px) {
+  .pressCard {
+    grid-template-columns: 1fr;
+    padding: 2.25rem 1.75rem;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .pageHeader {
+    padding: 2.5rem 0 3rem 0;
+    margin-bottom: 2.5rem;
+  }
+
+  .pressContactGroup {
+    padding: 1.5rem;
+  }
+}

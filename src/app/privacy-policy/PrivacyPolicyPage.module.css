@@ -1,0 +1,304 @@
+/* Orion Technik - Legal & Privacy Policy Styles */
+
+.main {
+  min-height: 85vh;
+  background-color: var(--color-brand-white);
+  padding-bottom: 6rem;
+}
+
+/* Page Header */
+.pageHeader {
+  background-color: var(--color-brand-grey);
+  border-bottom: 1px solid var(--color-brand-border);
+  padding: 3.5rem 0 4rem 0;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 2rem;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.breadcrumbLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-brand-text-muted);
+  transition: color var(--transition-fast);
+}
+
+.breadcrumbLink:hover {
+  color: var(--color-brand-primary);
+}
+
+.breadcrumbDivider {
+  color: var(--color-brand-border);
+}
+
+.breadcrumbCurrent {
+  color: var(--color-brand-primary);
+}
+
+.headerMeta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.gdprTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.85rem;
+  background-color: rgba(61, 94, 107, 0.08);
+  border: 1px solid rgba(61, 94, 107, 0.2);
+  border-radius: 999px;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-brand-primary);
+}
+
+.updatedDate {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-brand-text-muted);
+}
+
+.pageTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--color-brand-text);
+  margin-bottom: 1.25rem;
+}
+
+.pageLead {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: var(--color-brand-text-muted);
+  max-width: 860px;
+}
+
+/* Layout Shell: Sidebar index + Content */
+.contentShell {
+  padding-top: 3.5rem;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+/* Sticky Index */
+.tocSidebar {
+  position: sticky;
+  top: 96px;
+  background-color: var(--color-brand-white);
+  border: 1px solid var(--color-brand-border);
+  border-radius: 6px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+}
+
+.tocTitle {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-brand-text-muted);
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-brand-border-subtle);
+}
+
+.tocList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.tocLink {
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--color-brand-text-muted);
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  transition: all var(--transition-fast);
+  display: block;
+  line-height: 1.35;
+}
+
+.tocLink:hover {
+  color: var(--color-brand-primary);
+  background-color: rgba(61, 94, 107, 0.05);
+}
+
+/* Article Body */
+.legalBody {
+  max-width: 820px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.legalSection {
+  scroll-margin-top: 120px;
+}
+
+.sectionHeading {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--color-brand-text);
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.sectionNumber {
+  color: var(--color-brand-primary);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.paragraph {
+  font-family: var(--font-body);
+  font-size: 0.96rem;
+  line-height: 1.7;
+  color: #374151;
+  margin-bottom: 1.15rem;
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.legalList {
+  margin: 1rem 0 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.legalListItem {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.rightsCardGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.rightCard {
+  background-color: var(--color-brand-grey);
+  border: 1px solid var(--color-brand-border);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+}
+
+.rightCardTitle {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-brand-primary);
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rightCardDesc {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--color-brand-text);
+}
+
+.calloutBox {
+  background-color: rgba(61, 94, 107, 0.05);
+  border-left: 3px solid var(--color-brand-primary);
+  border-radius: 0 4px 4px 0;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.calloutText {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-brand-text);
+}
+
+.linkInline {
+  color: var(--color-brand-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+}
+
+.linkInline:hover {
+  color: var(--color-brand-primary-hover);
+}
+
+/* Contact Details Box */
+.contactCard {
+  background-color: var(--color-brand-grey);
+  border: 1px solid var(--color-brand-border);
+  border-radius: 6px;
+  padding: 2rem;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contactTitle {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-brand-text);
+}
+
+.contactInfoList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+  color: var(--color-brand-text);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .contentShell {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .tocSidebar {
+    display: none;
+  }
+}

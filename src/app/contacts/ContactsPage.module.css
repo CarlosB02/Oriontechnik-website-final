@@ -1,0 +1,391 @@
+.main {
+  min-height: 85vh;
+  background-color: var(--color-brand-white);
+  padding-bottom: 6rem;
+}
+
+.pageHeader {
+  background-color: var(--color-brand-grey);
+  border-bottom: 1px solid var(--color-brand-border);
+  padding: 3.5rem 0 4.5rem 0;
+  margin-bottom: 4rem;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 2rem;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.breadcrumbLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-brand-text-muted);
+  transition: color var(--transition-fast);
+}
+
+.breadcrumbLink:hover {
+  color: var(--color-brand-primary);
+}
+
+.breadcrumbDivider {
+  color: var(--color-brand-border);
+}
+
+.breadcrumbCurrent {
+  color: var(--color-brand-primary);
+}
+
+.headerTitleWrap {
+  max-width: 860px;
+}
+
+.pageTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--color-brand-text);
+  margin-bottom: 1.25rem;
+}
+
+.pageLead {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--color-brand-text-muted);
+}
+
+/* Contacts 2-Column Grid */
+.contactsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 3.5rem;
+  align-items: flex-start;
+}
+
+.infoColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.formColumn {
+  position: sticky;
+  top: 100px;
+}
+
+/* Facility Card */
+.infoCard {
+  background-color: var(--color-brand-grey);
+  border: 1px solid var(--color-brand-border);
+  padding: 2.25rem;
+}
+
+.cardTag {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-brand-primary);
+  margin-bottom: 0.5rem;
+}
+
+.facilityName {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-brand-text);
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+
+.facilityAddress {
+  font-style: normal;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--color-brand-text);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-brand-border);
+}
+
+.addressLine {
+  display: block;
+}
+
+.infoIcon {
+  color: var(--color-brand-primary);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.facilityDirect {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.directItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.directLabel {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-brand-text-muted);
+  margin-bottom: 0.2rem;
+}
+
+.directLink {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-brand-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.directLink:hover {
+  text-decoration: underline;
+  color: var(--color-brand-primary-hover);
+}
+
+.transitBox {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  background-color: var(--color-brand-white);
+  border: 1px solid var(--color-brand-border);
+  font-size: 0.8rem;
+  color: var(--color-brand-text-muted);
+}
+
+.transitIcon {
+  color: var(--color-brand-primary);
+  flex-shrink: 0;
+}
+
+/* Department Channels Card */
+.deptCardTitle {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-brand-text);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-brand-border);
+}
+
+.deptList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.deptItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-brand-border-subtle);
+}
+
+.deptItem:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.deptTitle {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-brand-text);
+  margin-bottom: 0.15rem;
+}
+
+.deptDesc {
+  display: block;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--color-brand-text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.deptLink {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-brand-primary);
+  text-decoration: none;
+  width: fit-content;
+}
+
+.deptLink:hover {
+  text-decoration: underline;
+}
+
+/* AOG & Operating Hours Card */
+.aogCard {
+  background-color: var(--color-brand-primary);
+  color: var(--color-brand-white);
+  padding: 2.25rem;
+}
+
+.aogHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.aogIcon {
+  color: var(--color-brand-secondary);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.aogTitle {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-brand-white);
+  margin-bottom: 0.35rem;
+  text-transform: none;
+}
+
+.aogHours {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.aogDivider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.16);
+  margin: 1.5rem 0;
+}
+
+.aogNotice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.aogNoticeIcon {
+  color: var(--color-brand-secondary);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.aogNotice strong {
+  display: block;
+  color: var(--color-brand-secondary);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+/* Map Link Card */
+.mapLinkCard {
+  background-color: var(--color-brand-grey);
+  border: 1px solid var(--color-brand-border);
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.mapLinkText h4 {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-brand-text);
+  margin-bottom: 0.2rem;
+}
+
+.mapLinkText p {
+  font-size: 0.8rem;
+  color: var(--color-brand-text-muted);
+}
+
+.mapBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.15rem;
+  background-color: var(--color-brand-white);
+  border: 1px solid var(--color-brand-border);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-brand-primary);
+  border-radius: 2px;
+  transition: all var(--transition-fast);
+}
+
+.mapBtn:hover {
+  border-color: var(--color-brand-primary);
+  background-color: var(--color-brand-primary);
+  color: var(--color-brand-white);
+}
+
+@media (max-width: 1024px) {
+  .contactsGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .formColumn {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .pageHeader {
+    padding: 2.5rem 0 3rem 0;
+    margin-bottom: 2.5rem;
+  }
+
+  .infoCard,
+  .aogCard {
+    padding: 1.5rem;
+  }
+
+  .facilityDirect {
+    grid-template-columns: 1fr;
+  }
+}

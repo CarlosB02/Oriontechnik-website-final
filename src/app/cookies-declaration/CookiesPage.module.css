@@ -1,0 +1,403 @@
+/* Orion Technik - Cookies Declaration Page Styles */
+
+.main {
+  min-height: 85vh;
+  background-color: var(--color-brand-white);
+  padding-bottom: 6rem;
+}
+
+/* Page Header */
+.pageHeader {
+  background-color: var(--color-brand-grey);
+  border-bottom: 1px solid var(--color-brand-border);
+  padding: 3.5rem 0 4rem 0;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 2rem;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.breadcrumbLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-brand-text-muted);
+  transition: color var(--transition-fast);
+}
+
+.breadcrumbLink:hover {
+  color: var(--color-brand-primary);
+}
+
+.breadcrumbDivider {
+  color: var(--color-brand-border);
+}
+
+.breadcrumbCurrent {
+  color: var(--color-brand-primary);
+}
+
+.headerMeta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.cookiesTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.85rem;
+  background-color: rgba(61, 94, 107, 0.08);
+  border: 1px solid rgba(61, 94, 107, 0.2);
+  border-radius: 999px;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-brand-primary);
+}
+
+.updatedDate {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-brand-text-muted);
+}
+
+.pageTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--color-brand-text);
+  margin-bottom: 1.25rem;
+}
+
+.pageLead {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: var(--color-brand-text-muted);
+  max-width: 860px;
+}
+
+/* Main Container */
+.contentWrap {
+  padding-top: 3.5rem;
+  max-width: 880px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.legalSection {
+  scroll-margin-top: 120px;
+}
+
+.sectionHeading {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--color-brand-text);
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.paragraph {
+  font-family: var(--font-body);
+  font-size: 0.96rem;
+  line-height: 1.7;
+  color: #374151;
+  margin-bottom: 1.15rem;
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* Category Grid */
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.categoryCard {
+  background-color: var(--color-brand-grey);
+  border: 1px solid var(--color-brand-border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.categoryTitle {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-brand-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.statusPillRequired {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  background-color: rgba(61, 94, 107, 0.12);
+  color: var(--color-brand-primary);
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.statusPillOptional {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  background-color: #E5E7EB;
+  color: #4B5563;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.categoryDesc {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--color-brand-text-muted);
+}
+
+/* Cookies Inventory Table */
+.tableWrap {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--color-brand-border);
+  border-radius: 6px;
+  margin-top: 1.5rem;
+  background-color: var(--color-brand-white);
+}
+
+.cookiesTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.tableHeader {
+  background-color: var(--color-brand-grey);
+  border-bottom: 1px solid var(--color-brand-border);
+}
+
+.tableTh {
+  padding: 0.9rem 1.25rem;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-brand-text-muted);
+}
+
+.tableRow {
+  border-bottom: 1px solid var(--color-brand-border-subtle);
+  transition: background-color var(--transition-fast);
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.tableRow:hover {
+  background-color: rgba(61, 94, 107, 0.02);
+}
+
+.tableTd {
+  padding: 1rem 1.25rem;
+  vertical-align: top;
+  line-height: 1.5;
+  color: #374151;
+}
+
+.cookieName {
+  font-family: var(--font-mono, monospace);
+  font-weight: 700;
+  color: var(--color-brand-primary);
+  font-size: 0.88rem;
+  background-color: rgba(61, 94, 107, 0.06);
+  padding: 0.2rem 0.45rem;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.cookiePurpose {
+  font-size: 0.88rem;
+  color: var(--color-brand-text);
+}
+
+.cookieExpiry {
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-brand-text-muted);
+  white-space: nowrap;
+}
+
+/* Browser Management Grid */
+.browserGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.browserCard {
+  background-color: var(--color-brand-grey);
+  border: 1px solid var(--color-brand-border);
+  border-radius: 6px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: all var(--transition-fast);
+}
+
+.browserCard:hover {
+  border-color: var(--color-brand-primary);
+  transform: translateY(-2px);
+}
+
+.browserName {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-brand-text);
+}
+
+.browserLink {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-brand-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.browserLink:hover {
+  color: var(--color-brand-primary-hover);
+}
+
+/* Callout Box */
+.calloutBox {
+  background-color: rgba(61, 94, 107, 0.05);
+  border-left: 3px solid var(--color-brand-primary);
+  border-radius: 0 4px 4px 0;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.calloutText {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-brand-text);
+}
+
+.linkInline {
+  color: var(--color-brand-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+}
+
+.linkInline:hover {
+  color: var(--color-brand-primary-hover);
+}
+
+/* Cross link box */
+.crossLinkCard {
+  background-color: var(--color-brand-grey);
+  border: 1px solid var(--color-brand-border);
+  border-radius: 6px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.crossLinkText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.crossLinkTitle {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-brand-text);
+}
+
+.crossLinkDesc {
+  font-size: 0.9rem;
+  color: var(--color-brand-text-muted);
+}
+
+.crossLinkBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.4rem;
+  background-color: var(--color-brand-primary);
+  color: var(--color-brand-white);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.crossLinkBtn:hover {
+  background-color: var(--color-brand-primary-hover);
+  transform: translateY(-1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .categoryGrid,
+  .browserGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .crossLinkCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .crossLinkBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}

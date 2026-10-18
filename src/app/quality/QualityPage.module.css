@@ -1,0 +1,179 @@
+/* Orion Technik - Quality & Certifications Page Styles */
+
+.main {
+  min-height: 85vh;
+  background-color: var(--color-brand-white);
+  padding-bottom: 5rem;
+}
+
+.pageHeader {
+  background-color: var(--color-brand-grey);
+  border-bottom: 1px solid var(--color-brand-border);
+  padding: 3.5rem 0 4.5rem 0;
+  margin-bottom: 0;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 2rem;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.breadcrumbLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-brand-text-muted);
+  transition: color var(--transition-fast);
+}
+
+.breadcrumbLink:hover {
+  color: var(--color-brand-primary);
+}
+
+.breadcrumbDivider {
+  color: var(--color-brand-border);
+}
+
+.breadcrumbCurrent {
+  color: var(--color-brand-primary);
+}
+
+.headerTitleWrap {
+  max-width: 860px;
+}
+
+.pageTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--color-brand-text);
+  margin-bottom: 1.25rem;
+}
+
+.pageLead {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--color-brand-text-muted);
+}
+
+/* Audit CTA Section */
+.auditCtaSection {
+  margin-top: 5rem;
+}
+
+.auditCtaCard {
+  background-color: var(--color-brand-white);
+  border: 1px solid var(--color-brand-border);
+  padding: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+}
+
+.auditCtaText {
+  max-width: 680px;
+}
+
+.auditCtaHeading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  font-weight: 700;
+  color: var(--color-brand-text);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+  text-transform: none;
+}
+
+.auditCtaLead {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-brand-text-muted);
+}
+
+.auditCtaActions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.ctaPrimaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.95rem 1.75rem;
+  background-color: var(--color-brand-primary);
+  color: var(--color-brand-white);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: background-color var(--transition-fast);
+}
+
+.ctaPrimaryBtn:hover {
+  background-color: var(--color-brand-primary-hover);
+}
+
+.ctaSecondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.95rem 1.75rem;
+  background-color: var(--color-brand-white);
+  color: var(--color-brand-primary);
+  border: 1px solid var(--color-brand-border);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all var(--transition-fast);
+}
+
+.ctaSecondaryBtn:hover {
+  border-color: var(--color-brand-primary);
+  background-color: var(--color-brand-grey);
+}
+
+@media (max-width: 1024px) {
+  .auditCtaCard {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2.5rem;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .pageHeader {
+    padding: 2.5rem 0 3rem 0;
+  }
+
+  .auditCtaActions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .ctaPrimaryBtn,
+  .ctaSecondaryBtn {
+    justify-content: center;
+  }
+}

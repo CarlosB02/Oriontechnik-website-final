@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 48" fill="none" width="280" height="48">
+  <!-- Geometric Orion icon -->
+  <g transform="translate(4, 6)">
+    <polygon points="18,0 36,10 36,26 18,36 0,26 0,10" stroke="#3D5E6B" stroke-width="2.5" fill="none" />
+    <polygon points="18,7 28,14 28,24 18,29 8,24 8,14" fill="#C3C8B3" opacity="0.85" />
+    <circle cx="18" cy="18" r="3.5" fill="#3D5E6B" />
+    <line x1="18" y1="0" x2="18" y2="7" stroke="#3D5E6B" stroke-width="2" />
+    <line x1="36" y1="26" x2="28" y2="24" stroke="#3D5E6B" stroke-width="2" />
+    <line x1="0" y1="26" x2="8" y2="24" stroke="#3D5E6B" stroke-width="2" />
+  </g>
+  <!-- Brand text -->
+  <text x="56" y="24" font-family="'Space Grotesk', system-ui, sans-serif" font-size="18" font-weight="700" letter-spacing="0.12em" fill="#1A272C">ORION</text>
+  <text x="126" y="24" font-family="'Space Grotesk', system-ui, sans-serif" font-size="18" font-weight="400" letter-spacing="0.12em" fill="#3D5E6B">TECHNIK</text>
+  <text x="56" y="36" font-family="'Inter', system-ui, sans-serif" font-size="8" font-weight="600" letter-spacing="0.25em" fill="#718288">MAINTENANCE &amp; ENGINEERING</text>
+</svg>
