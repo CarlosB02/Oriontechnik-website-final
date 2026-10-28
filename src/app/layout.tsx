@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Space_Grotesk, Inter } from 'next/font/google';
+import CookieBanner from '@/components/CookieBanner';
 import './globals.css';
 
 const spaceGrotesk = Space_Grotesk({
@@ -156,7 +157,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        {children}
+        <CookieBanner />
+      </body>
     </html>
   );
 }

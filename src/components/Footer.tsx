@@ -128,6 +128,15 @@ export default function Footer({ onOpenContact }: FooterProps) {
             <Link href="/cookies-declaration" className={styles.legalLink}>
               Cookies Declaration
             </Link>
+            <span className={styles.legalDivider}>•</span>
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new CustomEvent('orionOpenCookieBanner'))}
+              className={styles.legalLink}
+              style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, font: 'inherit' }}
+            >
+              Cookie Settings
+            </button>
           </div>
         </div>
       </div>
