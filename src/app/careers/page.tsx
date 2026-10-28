@@ -7,14 +7,14 @@ import { jobOpenings } from '@/data/careersData';
 export const metadata: Metadata = {
   title: 'Careers & Recruitment | Orion Technik Maintenance & Engineering',
   description:
-    'Join Orion Technik in Arruda dos Vinhos, Portugal. Explore aerospace career opportunities: EASA Part 66 B1/B2 Licensed Engineers, Component Overhaul Technicians, CAMO Airworthiness, Aerospace Supply Chain, and Quality Assurance.',
+    'Build your career where precision matters. Join a team of engineers, technicians and specialists keeping defense and commercial aircraft mission-ready around the world.',
   alternates: {
     canonical: '/careers',
   },
   openGraph: {
     title: 'Careers & Recruitment | Orion Technik Aerospace Team',
     description:
-      'Elevate your aviation career at an approved European EASA & EMAR Part 145 repair station in Arruda dos Vinhos, Portugal. Explore open positions and apply today.',
+      'Build your career where precision matters. Join a team of engineers, technicians and specialists keeping defense and commercial aircraft mission-ready around the world.',
     url: 'https://oriontechnik.com/careers',
     type: 'website',
   },

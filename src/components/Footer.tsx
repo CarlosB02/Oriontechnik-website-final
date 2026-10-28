@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Instagram, Linkedin } from 'lucide-react';
 import styles from './Footer.module.css';
 
 interface FooterProps {
@@ -70,31 +70,22 @@ export default function Footer({ onOpenContact }: FooterProps) {
             {/* Social Icons */}
             <div className={styles.socialGroup} aria-label="Social media links">
               <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.socialIconBtn}
-                aria-label="Facebook"
-              >
-                <span className={styles.socialLetter}>f</span>
-              </a>
-              <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/oriontechnik/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialIconBtn}
                 aria-label="Instagram"
               >
-                <span className={styles.socialLetter}>ig</span>
+                <Instagram size={17} strokeWidth={1.8} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/oriontechnik/home/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.socialIconBtn}
                 aria-label="LinkedIn"
               >
-                <span className={styles.socialLetter}>in</span>
+                <Linkedin size={17} strokeWidth={1.8} />
               </a>
             </div>
 
@@ -106,29 +97,38 @@ export default function Footer({ onOpenContact }: FooterProps) {
                 <ArrowUpRight size={15} className={styles.careersArrow} />
               </Link>
             </div>
-
-            {/* Legal Links */}
-            <div className={styles.legalGroup}>
-              <Link href="/careers" className={styles.legalLink}>
-                Careers
-              </Link>
-              <span className={styles.legalDivider}>&nbsp;•&nbsp;</span>
-              <Link href="/privacy-policy" className={styles.legalLink}>
-                Privacy Policy
-              </Link>
-              <span className={styles.legalDivider}>&nbsp;•&nbsp;</span>
-              <Link href="/cookies-declaration" className={styles.legalLink}>
-                Cookies Declaration
-              </Link>
-            </div>
           </div>
         </div>
 
-        {/* Bottom copyright notice */}
+        {/* Bottom copyright notice, credits & legal links */}
         <div className={styles.bottomBar}>
-          <p className={styles.copyright}>
-            © {new Date().getFullYear()} Orion Technik - Maintenance &amp; Engineering. All rights reserved.
-          </p>
+          <div className={styles.bottomLeft}>
+            <p className={styles.copyright}>
+              © {new Date().getFullYear()} Orion Technik - Maintenance &amp; Engineering. All rights reserved.
+            </p>
+            <span className={styles.bottomDivider}>•</span>
+            <p className={styles.madeBy}>
+              Engineered with precision by{' '}
+              <a
+                href="https://enimble.pt"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.madeByLink}
+              >
+                Enimble
+              </a>
+            </p>
+          </div>
+
+          <div className={styles.bottomRight}>
+            <Link href="/privacy-policy" className={styles.legalLink}>
+              Privacy Policy
+            </Link>
+            <span className={styles.legalDivider}>•</span>
+            <Link href="/cookies-declaration" className={styles.legalLink}>
+              Cookies Declaration
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

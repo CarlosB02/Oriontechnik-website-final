@@ -132,9 +132,8 @@ export default function RootLayout({
         telephone: '+351210987098',
         email: 'info@oriontechnik.com',
         sameAs: [
-          'https://www.linkedin.com/company/orion-technik',
-          'https://www.instagram.com/oriontechnik',
-          'https://www.facebook.com/oriontechnik',
+          'https://www.linkedin.com/company/oriontechnik/',
+          'https://www.instagram.com/oriontechnik/',
         ],
       },
       {

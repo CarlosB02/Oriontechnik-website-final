@@ -97,8 +97,9 @@
 .socialLegalCol {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
+  gap: 1.5rem;
 }
 
 .socialGroup {
@@ -134,7 +135,6 @@
 }
 
 .careersBlock {
-  margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
@@ -174,40 +174,76 @@
   color: var(--color-brand-secondary);
 }
 
-.legalGroup {
-  margin-top: 1.25rem;
-}
-
-.legalLink {
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.7);
-  transition: color var(--transition-fast);
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-.legalLink:hover {
-  color: var(--color-brand-white);
-}
-
-.legalDivider {
-  color: rgba(255, 255, 255, 0.4);
-  font-size: 0.85rem;
-}
-
 .bottomBar {
   padding-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.bottomLeft {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.bottomRight {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 .copyright {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.5);
   font-family: var(--font-body);
+}
+
+.bottomDivider {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.8rem;
+}
+
+.legalLink {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.65);
+  transition: color var(--transition-fast);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.legalLink:hover {
+  color: var(--color-brand-secondary);
+}
+
+.legalDivider {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.8rem;
+}
+
+.madeBy {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-body);
+}
+
+.madeByLink {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.madeByLink:hover {
+  color: var(--color-brand-secondary);
 }
 
 @media (max-width: 900px) {
@@ -217,7 +253,7 @@
   }
 
   .socialLegalCol {
-    gap: 2rem;
+    gap: 1.5rem;
   }
 }
 
@@ -237,5 +273,25 @@
   .ctaCircle {
     width: 40px;
     height: 40px;
+  }
+
+  .bottomBar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+
+  .bottomLeft {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .bottomLeft > .bottomDivider {
+    display: none;
+  }
+
+  .bottomRight {
+    gap: 0.5rem;
   }
 }

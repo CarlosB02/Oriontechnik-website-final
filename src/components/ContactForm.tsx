@@ -90,7 +90,6 @@ export default function ContactForm() {
   return (
     <div className={styles.formCard}>
       <div className={styles.formHeader}>
-        <span className={styles.formTag}>REQUEST FOR QUOTATION / INQUIRY</span>
         <h2 className={styles.formTitle}>Transmit Your Requirements</h2>
         <p className={styles.formSubtitle}>
           Complete the form below to reach our maintenance engineers, supply chain specialists, or technical representatives.
@@ -173,45 +172,6 @@ export default function ContactForm() {
           </div>
         </div>
 
-        {/* Division & Aircraft / Part Number */}
-        <div className={styles.formRow}>
-          <div className={styles.fieldGroup}>
-            <label htmlFor="division" className={styles.label}>
-              Department / Service Division <span className={styles.requiredMark}>*</span>
-            </label>
-            <select
-              id="division"
-              name="division"
-              value={formData.division}
-              onChange={handleChange}
-              className={styles.select}
-            >
-              <option value="Repair Capabilities & MRO">Repair Capabilities &amp; MRO</option>
-              <option value="Supply Chain & Parts Distribution">Supply Chain &amp; Parts Distribution</option>
-              <option value="24/7 AOG Emergency Dispatch">24/7 AOG Emergency Dispatch</option>
-              <option value="Technical & Engineering Support">Technical &amp; Engineering Support</option>
-              <option value="Supported Fleet Program">Supported Fleet Program</option>
-              <option value="Quality, Airworthiness & Compliance">Quality, Airworthiness &amp; Compliance</option>
-              <option value="General & Administrative Inquiries">General / Administrative</option>
-            </select>
-          </div>
-
-          <div className={styles.fieldGroup}>
-            <label htmlFor="partNumber" className={styles.label}>
-              Aircraft Type / P/N / NSN (Optional)
-            </label>
-            <input
-              type="text"
-              id="partNumber"
-              name="partNumber"
-              value={formData.partNumber}
-              onChange={handleChange}
-              placeholder="e.g. C-130, AW101, P/N 892010"
-              className={styles.input}
-            />
-          </div>
-        </div>
-
         {/* Detailed Message / Work Scope */}
         <div className={styles.fieldGroup}>
           <label htmlFor="message" className={styles.label}>
@@ -246,7 +206,7 @@ export default function ContactForm() {
             )}
           </button>
           <span className={styles.confidentialNote}>
-            All transmissions treated with aerospace non-disclosure confidentiality.
+            All transmissions are treated with confidentiality.
           </span>
         </div>
       </form>

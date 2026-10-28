@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, ShieldCheck, Mail, FileText, CheckCircle2 } from 'lucide-react';
+import { ShieldCheck, Mail, FileText, CheckCircle2 } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import styles from './PrivacyPolicyPage.module.css';
@@ -52,15 +52,6 @@ export default function PrivacyPolicyPage() {
         {/* Page Header */}
         <section className={styles.pageHeader}>
           <div className="container">
-            <nav className={styles.breadcrumbs} aria-label="Breadcrumb navigation">
-              <Link href="/" className={styles.breadcrumbLink}>
-                <ArrowLeft size={14} />
-                <span>Home</span>
-              </Link>
-              <span className={styles.breadcrumbDivider}>/</span>
-              <span className={styles.breadcrumbCurrent}>Privacy Policy</span>
-            </nav>
-
             <div className={styles.headerMeta}>
               <span className={styles.gdprTag}>
                 <ShieldCheck size={14} />

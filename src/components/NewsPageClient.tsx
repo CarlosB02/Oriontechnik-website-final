@@ -1,8 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
-import { ArrowLeft, Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ContactModal from '@/components/ContactModal';
@@ -24,28 +23,21 @@ export default function NewsPageClient({ articles }: NewsPageClientProps) {
         {/* News Hero Header */}
         <section className={styles.pageHeader}>
           <div className="container">
-            <nav className={styles.breadcrumbs} aria-label="Breadcrumb navigation">
-              <Link href="/" className={styles.breadcrumbLink}>
-                <ArrowLeft size={14} />
-                <span>Home</span>
-              </Link>
-              <span className={styles.breadcrumbDivider}>/</span>
-              <span className={styles.breadcrumbCurrent}>News &amp; Recognition</span>
-            </nav>
-
             <div className={styles.headerTitleWrap}>
               <h1 className={styles.pageTitle}>NEWS &amp; RECOGNITION</h1>
               <p className={styles.pageLead}>
-                Official announcements, military defense contracts, global airworthiness certifications, and company milestones from Orion Technik Maintenance &amp; Engineering.
+                Follow our latest updates, from new partnerships and capabilities to the milestones that shape our journey.
               </p>
             </div>
           </div>
         </section>
 
         {/* Directory Section */}
-        <div className="container">
-          <NewsDirectory initialArticles={articles} />
-        </div>
+        <section className={styles.contentSection}>
+          <div className="container">
+            <NewsDirectory initialArticles={articles} />
+          </div>
+        </section>
 
         {/* Media & Press Office Box */}
         <section className={styles.pressSection} aria-label="Media Contacts">

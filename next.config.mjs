@@ -16,6 +16,10 @@ const nextConfig = {
         source: '/recrutamento',
         destination: '/careers',
       },
+      {
+        source: '/vagas',
+        destination: '/careers',
+      },
     ];
   },
 };

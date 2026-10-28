@@ -18,9 +18,7 @@ export interface JobOpening {
 export const departmentFilters = [
   { id: 'all', label: 'All Openings' },
   { id: 'mro', label: 'MRO & Workshop' },
-  { id: 'engineering', label: 'Engineering & CAMO' },
-  { id: 'supply-chain', label: 'Supply Chain & AOG' },
-  { id: 'quality', label: 'Quality & Compliance' },
+  { id: 'supply-chain', label: 'Supply Chain & Logistics' },
 ] as const;
 
 export const jobOpenings: JobOpening[] = [
@@ -124,101 +122,5 @@ export const jobOpenings: JobOpening[] = [
       'Comprehensive health insurance and benefits.'
     ],
     postedDate: 'SEPTEMBER 2026',
-  },
-  {
-    id: 'camo-airworthiness-engineer',
-    title: 'CAMO & Technical Airworthiness Engineer',
-    department: 'Engineering & Technical Services',
-    departmentCategory: 'engineering',
-    location: 'Arruda dos Vinhos, Portugal',
-    workplaceType: 'Hybrid',
-    contractType: 'Full-time • Permanent',
-    experienceLevel: 'Mid to Senior (3+ years)',
-    summary:
-      'Oversee continuing airworthiness management (MT.CAMO.0107), maintenance program optimization, Airworthiness Directives (AD/SB) review, and operator technical records.',
-    keyResponsibilities: [
-      'Evaluate manufacturer Service Bulletins (SB), Airworthiness Directives (AD), and regulatory modifications for assigned fixed and rotary-wing fleets.',
-      'Draft and update Aircraft Maintenance Programmes (AMP) and reliability monitoring reports in accordance with Part-CAMO regulations.',
-      'Manage technical records, life-limited parts (LLP) status, engine logs, and modification history.',
-      'Coordinate airworthiness reviews (ARC) and liaison with civil aviation authorities (ANAC) and military airworthiness bodies.',
-      'Provide engineering liaison support for structural repairs, concession requests, and design engineering approvals.'
-    ],
-    requirements: [
-      'Degree in Aerospace, Aeronautical, or Mechanical Engineering.',
-      '3+ years experience within a certified CAMO organization or airline engineering department.',
-      'In-depth knowledge of EASA Part-CAMO, Part-M, Part-ML, and Part-21 regulatory frameworks.',
-      'Proficiency in aviation maintenance management software and technical data analysis.',
-      'Excellent analytical skills and fluent command of professional English.'
-    ],
-    whatWeOffer: [
-      'Hybrid work flexibility (Arruda dos Vinhos facility & remote engineering days).',
-      'Competitive salary aligned with engineering expertise.',
-      'Direct participation in high-visibility military and commercial aircraft sustainment projects.',
-      'Health insurance and professional development sponsorships.'
-    ],
-    postedDate: 'SEPTEMBER 2026',
-  },
-  {
-    id: 'quality-compliance-inspector',
-    title: 'Quality Assurance & Airworthiness Inspector (Part 145 / EMAR 145)',
-    department: 'Quality & Regulatory Affairs',
-    departmentCategory: 'quality',
-    location: 'Arruda dos Vinhos, Portugal',
-    workplaceType: 'On-site',
-    contractType: 'Full-time • Permanent',
-    experienceLevel: 'Senior (4+ years)',
-    summary:
-      'Maintain and elevate Orion Technik’s quality management system, conducting internal audits, compliance oversight, and supplier surveillance under EASA & EMAR Part 145.',
-    keyResponsibilities: [
-      'Conduct planned internal audits across maintenance workshops, logistics stores, and engineering offices to guarantee 100% regulatory compliance.',
-      'Manage the company occurrence reporting system, conducting root cause analysis and implementing corrective & preventive actions (CAPA).',
-      'Perform incoming conformity audits on critical components, standard hardware, and subcontractors.',
-      'Prepare the organization for external audits by civil aviation authorities (EASA / ANAC), military directorates (EMAR), and international OEM partners.',
-      'Deliver internal quality and human factors training to certifying staff and workshop technicians.'
-    ],
-    requirements: [
-      'Extensive background in aviation Quality Management Systems (EASA Part 145, EN 9100 / AS 9100, EMAR 145).',
-      'Recognized Quality Auditor qualification or significant audit experience in the aerospace sector.',
-      'Strong understanding of human factors, safety management systems (SMS), and aviation legislation.',
-      'Flawless integrity, objectivity, and communication skills in English and Portuguese.'
-    ],
-    whatWeOffer: [
-      'Key leadership position directly reporting to the Quality & Safety Director.',
-      'Competitive salary reflecting high regulatory responsibility.',
-      'Ongoing training in updated EASA / NATO / EMAR quality standards.',
-      'Full health benefits package and company meal subsidy.'
-    ],
-    postedDate: 'AUGUST 2026',
-  },
-  {
-    id: 'ndt-level-2-inspector',
-    title: 'Non-Destructive Testing (NDT) Inspector (Level II - EN 4179 / NAS 410)',
-    department: 'MRO & Component Workshop',
-    departmentCategory: 'mro',
-    location: 'Arruda dos Vinhos, Portugal',
-    workplaceType: 'On-site',
-    contractType: 'Full-time • Permanent',
-    experienceLevel: 'Specialist (3+ years)',
-    summary:
-      'Conduct aerospace non-destructive testing (Eddy Current, Magnetic Particle, Liquid Penetrant, and Ultrasonic) on critical airframe structural parts and rotating assemblies.',
-    keyResponsibilities: [
-      'Perform NDT inspections in accordance with approved engineering procedures, technical orders, and client specifications.',
-      'Prepare and certify written inspection reports detailing examination results, defect indications, and acceptance/rejection criteria.',
-      'Calibrate and maintain NDT equipment, reference standards, and testing chemistries within required limits.',
-      'Collaborate closely with repair engineers to evaluate structural fatigue, subsurface cracks, and corrosion wear.'
-    ],
-    requirements: [
-      'Current Level II Certification in accordance with EN 4179 / NAS 410 in at least two methods (ET, MT, PT, or UT).',
-      'Minimum 3 years aerospace NDT experience on aircraft components or metallic structures.',
-      'Acute visual acuity and color perception (verified to aerospace standards).',
-      'Knowledge of aerospace materials, heat treatments, and manufacturing processes.'
-    ],
-    whatWeOffer: [
-      'High-tier compensation for certified aerospace NDT specialists.',
-      'State-of-the-art dark room and inspection booths with calibrated instrumentation.',
-      'Support for Level III qualification and multi-method certifications.',
-      'Health insurance and full company benefits.'
-    ],
-    postedDate: 'OCTOBER 2026',
   },
 ];

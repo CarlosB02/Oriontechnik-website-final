@@ -18,13 +18,14 @@
   flex-direction: column;
   background-color: var(--color-brand-white);
   border: 1px solid var(--color-brand-border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   overflow: hidden;
   transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .card:hover {
   border-color: var(--color-brand-primary);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 12px 30px rgba(61, 94, 107, 0.14);
   transform: translateY(-2px);
 }
 

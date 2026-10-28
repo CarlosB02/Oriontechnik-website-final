@@ -135,8 +135,7 @@ export default function CareersApplicationForm({
     if (
       !formData.fullName.trim() ||
       !formData.email.trim() ||
-      !formData.phone.trim() ||
-      !formData.message.trim()
+      !formData.phone.trim()
     ) {
       setErrorMessage('Please fill in all mandatory fields marked with an asterisk (*).');
       return;
@@ -174,14 +173,14 @@ export default function CareersApplicationForm({
   const positionLabel = selectedJob
     ? selectedJob.title
     : formData.positionId === 'spontaneous-general'
-    ? 'Spontaneous Application - General Aviation'
-    : formData.positionId === 'spontaneous-mro'
-    ? 'Spontaneous Application - MRO & Workshop'
-    : formData.positionId === 'spontaneous-eng'
-    ? 'Spontaneous Application - Engineering & CAMO'
-    : formData.positionId === 'spontaneous-supply'
-    ? 'Spontaneous Application - Supply Chain & Logistics'
-    : 'Spontaneous Application';
+      ? 'Spontaneous Application - General Aviation'
+      : formData.positionId === 'spontaneous-mro'
+        ? 'Spontaneous Application - MRO & Workshop'
+        : formData.positionId === 'spontaneous-eng'
+          ? 'Spontaneous Application - Engineering & CAMO'
+          : formData.positionId === 'spontaneous-supply'
+            ? 'Spontaneous Application - Supply Chain & Logistics'
+            : 'Spontaneous Application';
 
   if (isSubmitted) {
     return (
@@ -238,16 +237,10 @@ export default function CareersApplicationForm({
   return (
     <div className={styles.formCard} id="candidatura-spot">
       <div className={styles.formHeader}>
-        <div className={styles.tagWrap}>
-          <span className={styles.formTag}>SUBMIT APPLICATION / CANDIDATURA</span>
-          <span className={styles.urgencyTag}>
-            <Sparkles size={13} /> Active Recruitment
-          </span>
-        </div>
         <h2 className={styles.formTitle}>Apply for a Position at Orion Technik</h2>
         <p className={styles.formSubtitle}>
           Complete the form below to apply for an active vacancy or submit a spontaneous
-          application. Our team reviews all engineering, MRO, and logistics profiles.
+          application.
         </p>
       </div>
 
@@ -352,50 +345,6 @@ export default function CareersApplicationForm({
           </div>
         </div>
 
-        {/* Experience Level & Certifications / Licenses */}
-        <div className={styles.formRow}>
-          <div className={styles.fieldGroup}>
-            <label htmlFor="careers-exp" className={styles.label}>
-              Aviation Experience Level <span className={styles.requiredMark}>*</span>
-            </label>
-            <select
-              id="careers-exp"
-              name="experienceLevel"
-              value={formData.experienceLevel}
-              onChange={handleChange}
-              className={styles.select}
-            >
-              <option value="Entry-Level / Junior (0 - 2 years)">
-                Entry-Level / Graduate / Apprentice (0 – 2 years)
-              </option>
-              <option value="3-5 years (Mid-Level)">
-                Mid-Level Professional (3 – 5 years)
-              </option>
-              <option value="5-10 years (Senior)">
-                Senior Specialist (5 – 10 years)
-              </option>
-              <option value="10+ years (Lead / Certifying Staff)">
-                Lead / Certifying Staff (10+ years)
-              </option>
-            </select>
-          </div>
-
-          <div className={styles.fieldGroup}>
-            <label htmlFor="careers-certs" className={styles.label}>
-              Licenses / Key Qualifications (Optional)
-            </label>
-            <input
-              type="text"
-              id="careers-certs"
-              name="certifications"
-              value={formData.certifications}
-              onChange={handleChange}
-              placeholder="e.g. EASA Part 66 B1.1, NDT Level II, CAMO, Degree..."
-              className={styles.input}
-            />
-          </div>
-        </div>
-
         {/* LinkedIn or Online Profile */}
         <div className={styles.fieldGroup}>
           <label htmlFor="careers-linkedin" className={styles.label}>
@@ -481,12 +430,11 @@ export default function CareersApplicationForm({
         {/* Cover Note / Message */}
         <div className={styles.fieldGroup}>
           <label htmlFor="careers-message" className={styles.label}>
-            Cover Note &amp; Motivation <span className={styles.requiredMark}>*</span>
+            Cover Note &amp; Motivation (Optional)
           </label>
           <textarea
             id="careers-message"
             name="message"
-            required
             rows={4}
             value={formData.message}
             onChange={handleChange}
@@ -530,11 +478,6 @@ export default function CareersApplicationForm({
               </>
             )}
           </button>
-
-          <div className={styles.securityTag}>
-            <ShieldCheck size={16} className={styles.securityIcon} />
-            <span>Strict confidentiality guaranteed for all applicants.</span>
-          </div>
         </div>
       </form>
     </div>

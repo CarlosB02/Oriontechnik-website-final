@@ -23,12 +23,52 @@ export default function Header({ onOpenContact }: HeaderProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    try {
+      const savedLang = localStorage.getItem('orion_preferred_lang');
+      if (savedLang === 'PT' || savedLang === 'EN') {
+        setActiveLang(savedLang);
+      }
+    } catch {
+      // ignore
+    }
+  }, []);
+
+  const handleLangChange = (lang: 'PT' | 'EN') => {
+    setActiveLang(lang);
+    try {
+      localStorage.setItem('orion_preferred_lang', lang);
+      window.dispatchEvent(new CustomEvent('orionLanguageChange', { detail: lang }));
+    } catch {
+      // ignore
+    }
+  };
+
   const navLinks = [
-    { label: 'CAPABILITIES', href: '/capabilities' },
-    { label: 'QUALITY', href: '/quality' },
-    { label: 'NEWS', href: '/news' },
-    { label: 'WHERE WE ARE', href: '/where-we-are' },
-    { label: 'CONTACTS', href: '/contacts' },
+    {
+      label: activeLang === 'PT' ? 'CAPACIDADES' : 'CAPABILITIES',
+      href: '/capabilities',
+    },
+    {
+      label: activeLang === 'PT' ? 'QUALIDADE' : 'QUALITY',
+      href: '/quality',
+    },
+    {
+      label: activeLang === 'PT' ? 'NOTÍCIAS' : 'NEWS',
+      href: '/news',
+    },
+    {
+      label: activeLang === 'PT' ? 'ONDE ESTAMOS' : 'WHERE WE ARE',
+      href: '/where-we-are',
+    },
+    {
+      label: activeLang === 'PT' ? 'VAGAS' : 'CAREERS',
+      href: '/careers',
+    },
+    {
+      label: activeLang === 'PT' ? 'CONTACTOS' : 'CONTACTS',
+      href: '/contacts',
+    },
   ];
 
   const handleNavClick = () => {
@@ -42,7 +82,7 @@ export default function Header({ onOpenContact }: HeaderProps) {
         <Link href="/" className={styles.logoLink} aria-label="Orion Technik Homepage">
           <div className={styles.logoWrapper}>
             <Image
-              src="/logos/orion-technik-logo-white.svg"
+              src="/logos/orion-technik-logo-white.png"
               alt="Orion Technik Maintenance & Engineering"
               width={260}
               height={44}
@@ -56,7 +96,7 @@ export default function Header({ onOpenContact }: HeaderProps) {
         <nav className={styles.desktopNav} aria-label="Main Navigation">
           <ul className={styles.navList}>
             {navLinks.map((link) => (
-              <li key={link.label} className={styles.navItem}>
+              <li key={link.href} className={styles.navItem}>
                 <Link href={link.href} className={styles.navLink}>
                   {link.label}
                 </Link>
@@ -69,7 +109,7 @@ export default function Header({ onOpenContact }: HeaderProps) {
             <button
               type="button"
               className={`${styles.langFlagBtn} ${activeLang === 'PT' ? styles.langFlagActive : ''}`}
-              onClick={() => setActiveLang('PT')}
+              onClick={() => handleLangChange('PT')}
               aria-pressed={activeLang === 'PT'}
               title="Português"
             >
@@ -84,7 +124,7 @@ export default function Header({ onOpenContact }: HeaderProps) {
             <button
               type="button"
               className={`${styles.langFlagBtn} ${activeLang === 'EN' ? styles.langFlagActive : ''}`}
-              onClick={() => setActiveLang('EN')}
+              onClick={() => handleLangChange('EN')}
               aria-pressed={activeLang === 'EN'}
               title="English"
             >
@@ -119,7 +159,7 @@ export default function Header({ onOpenContact }: HeaderProps) {
         <div className={styles.mobileDrawerContent}>
           <ul className={styles.mobileNavList}>
             {navLinks.map((link) => (
-              <li key={link.label} className={styles.mobileNavItem}>
+              <li key={link.href} className={styles.mobileNavItem}>
                 <Link
                   href={link.href}
                   className={styles.mobileNavLink}
@@ -135,11 +175,11 @@ export default function Header({ onOpenContact }: HeaderProps) {
           <div className={styles.mobileDrawerFooter}>
             <div className={styles.mobileLangSelector}>
               <Globe size={18} />
-              <span>Language:</span>
+              <span>{activeLang === 'PT' ? 'Idioma:' : 'Language:'}</span>
               <button
                 type="button"
                 className={`${styles.langFlagBtn} ${activeLang === 'PT' ? styles.langFlagActive : ''}`}
-                onClick={() => setActiveLang('PT')}
+                onClick={() => handleLangChange('PT')}
                 title="Português"
               >
                 <Image
@@ -153,7 +193,7 @@ export default function Header({ onOpenContact }: HeaderProps) {
               <button
                 type="button"
                 className={`${styles.langFlagBtn} ${activeLang === 'EN' ? styles.langFlagActive : ''}`}
-                onClick={() => setActiveLang('EN')}
+                onClick={() => handleLangChange('EN')}
                 title="English"
               >
                 <Image

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import InteractiveMapSection from '@/components/InteractiveMapSection';
@@ -67,19 +67,10 @@ export default function WhereWeArePage() {
         {/* Page Hero Header */}
         <section className={styles.pageHeader}>
           <div className="container">
-            <nav className={styles.breadcrumbs} aria-label="Breadcrumb navigation">
-              <Link href="/" className={styles.breadcrumbLink}>
-                <ArrowLeft size={14} />
-                <span>Home</span>
-              </Link>
-              <span className={styles.breadcrumbDivider}>/</span>
-              <span className={styles.breadcrumbCurrent}>Where We Are</span>
-            </nav>
-
             <div className={styles.headerTitleWrap}>
-              <h1 className={styles.pageTitle}>WHERE WE ARE</h1>
+              <h1 className={styles.pageTitle}>Global Presence, Local Support</h1>
               <p className={styles.pageLead}>
-                A global aerospace footprint anchored by our European EASA &amp; EMAR Part 145 maintenance facility in Portugal, supported by strategic operational reach worldwide.
+                Based in Portugal, working worldwide. From our facility near Lisbon, we support defense and commercial aviation across Europe, Africa, the Middle East, Asia and the Americas.
               </p>
             </div>
           </div>

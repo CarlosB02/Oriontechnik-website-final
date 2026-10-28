@@ -10,7 +10,7 @@
 .pageHeader {
   background-color: var(--color-brand-grey);
   border-bottom: 1px solid var(--color-brand-border);
-  padding: 3.5rem 0 4rem 0;
+  padding: 3.5rem 0;
 }
 
 .breadcrumbs {
@@ -77,12 +77,18 @@
 
 .pageTitle {
   font-family: var(--font-heading);
-  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-size: clamp(2rem, 3.5vw, 3.25rem);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.01em;
   color: var(--color-brand-text);
   margin-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .pageTitle {
+    white-space: nowrap;
+  }
 }
 
 .pageLead {
@@ -300,5 +306,11 @@
 
   .tocSidebar {
     display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .pageHeader {
+    padding: 2.5rem 0;
   }
 }

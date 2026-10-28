@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Cookie, ShieldCheck, ExternalLink } from 'lucide-react';
+import { ArrowRight, Cookie, ShieldCheck, ExternalLink } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import styles from './CookiesPage.module.css';
@@ -103,15 +103,6 @@ export default function CookiesPage() {
         {/* Page Header */}
         <section className={styles.pageHeader}>
           <div className="container">
-            <nav className={styles.breadcrumbs} aria-label="Breadcrumb navigation">
-              <Link href="/" className={styles.breadcrumbLink}>
-                <ArrowLeft size={14} />
-                <span>Home</span>
-              </Link>
-              <span className={styles.breadcrumbDivider}>/</span>
-              <span className={styles.breadcrumbCurrent}>Cookies Declaration</span>
-            </nav>
-
             <div className={styles.headerMeta}>
               <span className={styles.cookiesTag}>
                 <Cookie size={14} />

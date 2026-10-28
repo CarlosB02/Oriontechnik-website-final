@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CertificationsViewer from '@/components/CertificationsViewer';
@@ -90,15 +90,6 @@ export default function QualityPage() {
         {/* Page Hero Header */}
         <section className={styles.pageHeader}>
           <div className="container">
-            <nav className={styles.breadcrumbs} aria-label="Breadcrumb navigation">
-              <Link href="/" className={styles.breadcrumbLink}>
-                <ArrowLeft size={14} />
-                <span>Home</span>
-              </Link>
-              <span className={styles.breadcrumbDivider}>/</span>
-              <span className={styles.breadcrumbCurrent}>Quality &amp; Certifications</span>
-            </nav>
-
             <div className={styles.headerTitleWrap}>
               <h1 className={styles.pageTitle}>We pay attention to the detail</h1>
               <p className={styles.pageLead}>
@@ -117,10 +108,10 @@ export default function QualityPage() {
             <div className={styles.auditCtaCard}>
               <div className={styles.auditCtaText}>
                 <h3 className={styles.auditCtaHeading}>
-                  Require Official Certificates or Planning a Quality Audit?
+                  Need certificates or planning an audit?
                 </h3>
                 <p className={styles.auditCtaLead}>
-                  Our Quality Management Department assists civil operators, defense procurement officers, and quality auditors with formal documentation and facility inspection scheduling.
+                  Our quality team can provide official documentation and help you schedule a facility audit.
                 </p>
               </div>
 

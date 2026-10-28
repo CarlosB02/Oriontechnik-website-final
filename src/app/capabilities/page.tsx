@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
-  ArrowLeft,
   ArrowRight,
   Disc,
   Cpu,
@@ -225,15 +224,6 @@ export default function CapabilitiesPage() {
         {/* Page Hero Header */}
         <section className={styles.pageHeader}>
           <div className="container">
-            <nav className={styles.breadcrumbs} aria-label="Breadcrumb navigation">
-              <Link href="/" className={styles.breadcrumbLink}>
-                <ArrowLeft size={14} />
-                <span>Home</span>
-              </Link>
-              <span className={styles.breadcrumbDivider}>/</span>
-              <span className={styles.breadcrumbCurrent}>Capabilities</span>
-            </nav>
-
             <div className={styles.headerTitleWrap}>
               <h1 className={styles.pageTitle}>Engineering &amp; Operational Capabilities</h1>
               <p className={styles.pageLead}>
@@ -276,7 +266,7 @@ export default function CapabilitiesPage() {
               <span className={styles.sectionCategory}>01. Component Maintenance</span>
               <h2 className={styles.sectionTitle}>Repair Capabilities &amp; MRO List</h2>
               <p className={styles.sectionDesc}>
-                Our Lisbon repair station holds dual civil and military airworthiness accreditations, delivering comprehensive component maintenance, bench testing, calibration, and zero-defect overhauls.
+                Our Lisbon workshop is approved for both civil and military work, covering repair, testing, calibration and full overhaul across a wide range of aircraft components.
               </p>
             </header>
 
@@ -289,51 +279,6 @@ export default function CapabilitiesPage() {
                   <p className={styles.mroItemDesc}>{item.desc}</p>
                 </div>
               ))}
-            </div>
-
-            {/* DEMO PROPOSTA: OPÇÃO 2 - TABELA TIPOGRÁFICA (SEM CAIXAS / CARDS) */}
-            <div className={styles.typoDemoWrapper}>
-              <div className={styles.typoDemoHeader}>
-                <div className={styles.typoDemoBadge}>
-                  <span className={styles.typoBadgeDot} />
-                  <span>Opção 2 (Demonstração) &mdash; Formato Editorial / Tabela</span>
-                </div>
-                <h3 className={styles.typoDemoTitle}>Diretório Técnico de Capacidades MRO</h3>
-                <p className={styles.typoDemoLead}>
-                  Elimina os cartões individuais pesados. Apresenta as capacidades num layout tabular limpo, tipo especificação técnica aeronáutica, com separadores subtis e destaque interativo ao passar o rato.
-                </p>
-              </div>
-
-              <div className={styles.typoTable}>
-                <div className={styles.typoTableHeader}>
-                  <div className={styles.typoColIndex}>#</div>
-                  <div className={styles.typoColDomain}>Domínio / Sistema</div>
-                  <div className={styles.typoColDesc}>Escopo Técnico &amp; Serviços Oferecidos</div>
-                  <div className={styles.typoColAction}>Explorar</div>
-                </div>
-                <div className={styles.typoTableBody}>
-                  {mroDomains.map((item, index) => (
-                    <div key={`typo-${item.id}`} className={styles.typoTableRow}>
-                      <div className={styles.typoColIndex}>
-                        {String(index + 1).padStart(2, '0')}
-                      </div>
-                      <div className={styles.typoColDomain}>
-                        <div className={styles.typoDomainIcon}>{item.icon}</div>
-                        <span className={styles.typoDomainName}>{item.name}</span>
-                      </div>
-                      <div className={styles.typoColDesc}>
-                        <p className={styles.typoDescText}>{item.desc}</p>
-                      </div>
-                      <div className={styles.typoColAction}>
-                        <span className={styles.typoActionBtn}>
-                          Detalhes
-                          <ArrowRight size={13} className={styles.typoActionIcon} />
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
           </div>
         </section>
