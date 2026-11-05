@@ -247,12 +247,26 @@
 }
 
 @media (max-width: 580px) {
+  .bannerOverlay {
+    bottom: 0.75rem;
+    left: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .compactContainer {
+    padding: 1.15rem 1rem;
+  }
+
+  .actionsRow {
+    gap: 0.5rem;
+  }
+
   .btnAcceptAll,
   .btnReject {
     flex: 1;
-    min-width: 130px;
-    padding: 0.7rem 0.85rem;
-    font-size: 0.78rem;
+    min-width: 0;
+    padding: 0.7rem 0.5rem;
+    font-size: 0.75rem;
   }
   .btnCustomize {
     width: 100%;

@@ -7,8 +7,7 @@
 }
 
 .bannerContainer {
-  padding-left: var(--gutter-desktop);
-  padding-right: var(--gutter-desktop);
+  width: 100%;
 }
 
 .contentWrapper {
@@ -25,12 +24,15 @@
   line-height: 1.15;
   letter-spacing: -0.01em;
   color: var(--color-brand-white);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .actionBtn {
   width: 52px;
   height: 52px;
   border-width: 1.5px;
+  flex-shrink: 0;
 }
 
 @media (max-width: 768px) {
@@ -41,10 +43,16 @@
   .contentWrapper {
     flex-direction: row;
     align-items: center;
+    gap: 1.25rem;
+  }
+
+  .bannerTitle {
+    font-size: clamp(1.4rem, 5.5vw, 2.2rem);
   }
 
   .actionBtn {
     width: 44px;
     height: 44px;
+    flex-shrink: 0;
   }
 }

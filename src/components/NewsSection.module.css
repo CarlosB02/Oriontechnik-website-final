@@ -5,8 +5,7 @@
 }
 
 .newsContainer {
-  padding-left: var(--gutter-desktop);
-  padding-right: var(--gutter-desktop);
+  width: 100%;
 }
 
 .sectionHeader {
@@ -136,6 +135,7 @@
 
 .actionBtn {
   margin-left: auto;
+  flex-shrink: 0;
 }
 
 @media (max-width: 900px) {

@@ -16,6 +16,17 @@ export default function Header({ onOpenContact }: HeaderProps) {
   const [activeLang, setActiveLang] = useState<'PT' | 'EN'>('EN');
 
   useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
+  useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };

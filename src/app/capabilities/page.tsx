@@ -17,7 +17,6 @@ import {
   Wind,
   ShieldCheck,
   Check,
-  Plane,
   Boxes,
   Wrench,
   Clock,
@@ -30,6 +29,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import TechnicalProjectsAccordion from '@/components/TechnicalProjectsAccordion';
 import StatCounter from '@/components/StatCounter';
+import MroCapabilitiesCarousel from '@/components/MroCapabilitiesCarousel';
+import SupportedFleetCarousel from '@/components/SupportedFleetCarousel';
 import styles from './CapabilitiesPage.module.css';
 
 export const metadata: Metadata = {
@@ -133,7 +134,6 @@ const mroDomains: MroDomain[] = [
 interface FleetItem {
   id: string;
   name: string;
-  icon: React.ReactNode;
   image: string;
 }
 
@@ -141,25 +141,21 @@ const supportedFleet: FleetItem[] = [
   {
     id: 'fixed-wing-military',
     name: 'Fixed Wing – Military',
-    icon: <Plane size={36} />,
     image: '/images/fleet/fixed-wing-military.png',
   },
   {
     id: 'fixed-wing-civil',
     name: 'Fixed Wing – Civil',
-    icon: <Plane size={36} />,
     image: '/images/fleet/fixed-wing-civil.png',
   },
   {
     id: 'rotary-wing',
     name: 'Rotary Wing',
-    icon: <Plane size={36} />,
     image: '/images/fleet/rotary-wing.png',
   },
   {
     id: 'engine-propulsion',
     name: 'Engine & Propulsion',
-    icon: <Cog size={36} />,
     image: '/images/fleet/engine-propulsion.png',
   },
 ];
@@ -270,16 +266,8 @@ export default function CapabilitiesPage() {
               </p>
             </header>
 
-            {/* 12-Domain MRO Capability Grid */}
-            <div className={styles.mroGrid}>
-              {mroDomains.map((item) => (
-                <div key={item.id} className={styles.mroItem}>
-                  <div className={styles.mroIconWrap}>{item.icon}</div>
-                  <h4 className={styles.mroItemTitle}>{item.name}</h4>
-                  <p className={styles.mroItemDesc}>{item.desc}</p>
-                </div>
-              ))}
-            </div>
+            {/* 12-Domain MRO Capability Grid & Mobile Carousel */}
+            <MroCapabilitiesCarousel items={mroDomains} />
           </div>
         </section>
 
@@ -358,30 +346,8 @@ export default function CapabilitiesPage() {
               </p>
             </header>
 
-            <div className={styles.fleetGrid}>
-              {supportedFleet.map((fleet) => (
-                <div key={fleet.id} className={styles.fleetCard}>
-                  <div className={styles.fleetCardInner}>
-                    <Image
-                      src={fleet.image}
-                      alt={fleet.name}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                      className={styles.fleetBgImage}
-                      priority
-                    />
-                    <div className={styles.fleetOverlay} aria-hidden="true" />
-
-                    <div className={styles.fleetContent}>
-                      <div className={styles.fleetIconWrap}>
-                        {fleet.icon}
-                      </div>
-                      <h3 className={styles.fleetCardTitle}>{fleet.name}</h3>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+            {/* Supported Fleet Grid & Mobile Carousel */}
+            <SupportedFleetCarousel items={supportedFleet} />
           </div>
         </section>
 

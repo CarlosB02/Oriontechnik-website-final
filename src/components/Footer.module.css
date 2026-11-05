@@ -6,8 +6,7 @@
 }
 
 .footerContainer {
-  padding-left: var(--gutter-desktop);
-  padding-right: var(--gutter-desktop);
+  width: 100%;
 }
 
 .ctaRow {
@@ -244,6 +243,13 @@
 
 .madeByLink:hover {
   color: var(--color-brand-secondary);
+}
+
+@media (min-width: 1025px) {
+  .footer {
+    border-top: none;
+    padding-top: 3.5rem;
+  }
 }
 
 @media (max-width: 900px) {

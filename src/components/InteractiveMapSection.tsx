@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useCallback, useEffect, useRef } from 'react';
+import React, { useState, useCallback, useEffect, useRef, useMemo } from 'react';
 import { geoMercator, geoPath } from 'd3-geo';
 import { zoom as d3Zoom, zoomIdentity } from 'd3-zoom';
 import { select } from 'd3-selection';
@@ -164,12 +164,16 @@ function InteractiveMap({
     y: number;
   } | null>(null);
 
-  const projection = geoMercator()
-    .scale(125)
-    .center([10, 32])
-    .translate([MAP_WIDTH / 2, MAP_HEIGHT / 2]);
+  const projection = useMemo(
+    () =>
+      geoMercator()
+        .scale(125)
+        .center([10, 32])
+        .translate([MAP_WIDTH / 2, MAP_HEIGHT / 2]),
+    []
+  );
 
-  const pathGenerator = geoPath().projection(projection);
+  const pathGenerator = useMemo(() => geoPath().projection(projection), [projection]);
 
   // Fetch TopoJSON data (local first, fallback to CDN)
   useEffect(() => {

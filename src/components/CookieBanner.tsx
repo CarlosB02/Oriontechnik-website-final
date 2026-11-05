@@ -150,8 +150,7 @@ export default function CookieBanner() {
                 {isPT ? (
                   <>
                     A Orion Technik utiliza cookies estritamente necessários para garantir a operação segura e fiável
-                    da plataforma. Com o seu consentimento, usamos também cookies de desempenho para otimizar os nossos
-                    serviços aeroespaciais. Saiba mais na nossa{' '}
+                    da plataforma. Saiba mais na nossa{' '}
                     <Link href="/cookies-declaration" className={styles.policyLink}>
                       Declaração de Cookies
                     </Link>{' '}
@@ -164,7 +163,7 @@ export default function CookieBanner() {
                 ) : (
                   <>
                     Orion Technik uses strictly necessary cookies to ensure secure and reliable operation of our
-                    platform. With your consent, we also utilize performance cookies to enhance our aerospace services.
+                    platform.
                     Learn more in our{' '}
                     <Link href="/cookies-declaration" className={styles.policyLink}>
                       Cookies Declaration
